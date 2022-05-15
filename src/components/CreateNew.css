@@ -1,0 +1,22 @@
+.creatNew {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.button {
+  color: red;
+  background-color: aqua;
+  width: 200px;
+  height: 25px;
+}

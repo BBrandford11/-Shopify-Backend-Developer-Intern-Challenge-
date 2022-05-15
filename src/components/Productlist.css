@@ -1,0 +1,14 @@
+.Productlist {
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+  width: 50%;
+  height: 80vh;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: green;
+}
