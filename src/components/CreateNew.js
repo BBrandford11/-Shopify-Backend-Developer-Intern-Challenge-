@@ -1,18 +1,37 @@
 import React, { useState } from "react";
 import "./CreateNew.css";
 
-function Create() {
+function Create(props) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [quantity, setQuantity] = useState("");
+  const [, updateState] = useState();
 
-  const attributes = { name,description, location, quantity};
+  const attributes = { name, description, location, quantity };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("click")
-  }
+    console.log(attributes);
+    fetch("http://localhost:3001/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(attributes),
+    })
+      .then(() => {
+        console.log(`New Product added`);
+        setName("")
+        setDescription("")
+        setLocation("")
+        setQuantity("")
+        window.location.reload();
+      
+      })
+
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="creatNew">
@@ -47,7 +66,9 @@ function Create() {
             />
           </div>
         </div>
-        <button type="submit" className="button">Submit</button>
+        <button type="submit" className="button">
+          Submit
+        </button>
       </form>
     </div>
   );

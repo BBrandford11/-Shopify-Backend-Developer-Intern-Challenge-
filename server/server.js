@@ -1,20 +1,21 @@
 const express = require("express");
 require("dotenv").config();
-var cors = require("cors");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
 // express app
 const app = express();
 const port = 3001;
 
-var corsOptions = {
+const corsOptions = {
   origin: "http://localhost:3000",
   optionsSuccessStatus: 200,
 };
 
 // middleware
 app.use(cors(corsOptions));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded());
 
 // con setting
 // const pg = require("pg");
@@ -41,6 +42,21 @@ app.get("/", (req, res) => {
 
     res.send(data);
   });
+});
+
+app.post("/", (req, res) => {
+  const { name, description, location, quantity } = req.body;
+  console.log(req.body);
+  pool.query(
+    `INSERT INTO products (name, description, location, quantity)
+    VALUES ('${name}', '${description}', '${location}', ${quantity});`,
+    function (err, result) {
+      if (err) {
+        return console.error("error running query", err);
+      }
+    }
+  );
+  res.status(200).json({ message: "Product has been saved." });
 });
 
 app.listen(port, () => {
