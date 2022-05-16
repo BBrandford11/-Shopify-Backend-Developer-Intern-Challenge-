@@ -46,7 +46,7 @@ app.get("/", (req, res) => {
 
 app.post("/", (req, res) => {
   const { name, description, location, quantity } = req.body;
-  console.log(req.body);
+
   pool.query(
     `INSERT INTO products (name, description, location, quantity)
     VALUES ('${name}', '${description}', '${location}', ${quantity});`,
@@ -57,6 +57,20 @@ app.post("/", (req, res) => {
     }
   );
   res.status(200).json({ message: "Product has been saved." });
+});
+
+app.delete("/", (req, res) => {
+  const { id } = req.body;
+  console.log(id);
+  pool.query(
+    `DELETE FROM products WHERE product_id=${id};`,
+    function (err, result) {
+      if (err) {
+        return console.error("error running query", err);
+      }
+    }
+  );
+  res.status(200).json({ message: "Product has been deleted." });
 });
 
 app.listen(port, () => {
