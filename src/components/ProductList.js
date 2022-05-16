@@ -32,6 +32,7 @@ function ProductList(props) {
               {" "}
               Delete item
             </button>
+            <button>Edit item</button>
           </div>
         );
       })}
