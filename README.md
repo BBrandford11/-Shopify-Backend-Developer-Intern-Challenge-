@@ -10,9 +10,12 @@ This is my Fall 2022 Shopify developer intern challenge.
 
 
 ## Screenshots
-!["screenshot of creating main page showing food trucks."](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/adding_product.png)
-!["screenshot of registering a new truck"](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/main_page.png)
-!["screenshot of paying for a meal"](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/reduce%20quantity.png)
+screenshot of creating main page showing new product creation.
+!["screenshot of creating main page showing new product creation."](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/adding_product.png)
+screenshot of new product added to database.
+!["screenshot of new product added to database"](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/main_page.png)
+screenshot showing the reduction of quantity with shippment.
+!["screenshot showing the reduction of quantity with shippment."](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/reduce%20quantity.png)
 
 
 ## Features
