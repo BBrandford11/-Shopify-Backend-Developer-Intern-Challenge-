@@ -2,7 +2,7 @@
 
 ## Description
 
-This is our final large scale project form our schooling at Lighthouse Labs. This is a useful food ordering application designed to help locate and order from food trucks in you area. This project helped teach us about front end development using React and querying our elephant PSQL database. 
+This is my Fall 2022 Shopify developer intern challenge.
 
 ## Authors
 - [Bryce Brandford](https://github.com/BBrandford11)
@@ -16,11 +16,11 @@ This is our final large scale project form our schooling at Lighthouse Labs. Thi
 
 
 ## Features
-- Allows for users to see local food trucks location 
-- Has the ability to filter trucks by days of the week and by type of food offered
-- Allows for users to register a new truck and choose its location during each day of the week
-- Can visit a menu from the tuck and add food to order
-- Allows for credit card payment after completing your order
+- Allows for users to see all products in the product list populated from the database
+- Allows for users to add product list shoing all the data  
+- Allows for users to delete products from the list and remove them from the database
+- Allows for users to edit products from the list and update them in the databse
+- Allows for users to add products to a shipping list and decrease the quantity of that spcific item and update the database 
 
 ## Setup
 1. Clone this repository onto your local device.
