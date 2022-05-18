@@ -1,16 +1,17 @@
 .Productlist {
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
+
   width: 50%;
-  height: 80vh;
+  height: 90vh;
 }
 
 .product {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: green;
+  border: 2px solid black;
+
 }
 
 .itemRows {
@@ -18,7 +19,7 @@
   flex-direction: row;
   justify-content: left;
   border: 2px solid black;
-  background-color: green;
+
   
 }
 

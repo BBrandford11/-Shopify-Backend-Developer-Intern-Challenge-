@@ -34,7 +34,7 @@ function Edit(props) {
 
   return (
     <div className="creatNew">
-      Edit product
+      <h1>Edit product</h1>
       <form onSubmit={handleSubmit}>
         <div className="inputs">
           <div className="stack">

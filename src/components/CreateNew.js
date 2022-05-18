@@ -33,7 +33,7 @@ function Create(props) {
 
   return (
     <div className="creatNew">
-      new product
+      <h1>new product</h1>
       <form onSubmit={handleSubmit}>
         <div className="inputs">
           <div className="stack">
