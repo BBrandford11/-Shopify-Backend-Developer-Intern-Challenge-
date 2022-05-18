@@ -33,6 +33,8 @@ const pool = new Pool({
 
 pool.connect();
 
+//show all query
+
 app.get("/", (req, res) => {
   pool.query("SELECT * FROM Products", function (err, result) {
     if (err) {
@@ -43,6 +45,8 @@ app.get("/", (req, res) => {
     res.send(data);
   });
 });
+
+//add create query
 
 app.put("/", (req, res) => {
   const { name, description, location, quantity } = req.body;
@@ -58,7 +62,7 @@ app.put("/", (req, res) => {
   );
   res.status(200).json({ message: "Product has been saved." });
 });
-
+//delete query
 app.delete("/", (req, res) => {
   const { id } = req.body;
   console.log(id);
@@ -73,12 +77,14 @@ app.delete("/", (req, res) => {
   res.status(200).json({ message: "Product has been deleted." });
 });
 
+//edit query
 app.post("/", (req, res) => {
-  const { name, description, location, quantity } = req.body;
+  const { name, description, location, quantity, id } = req.body;
 
   pool.query(
-    `INSERT INTO products (name, description, location, quantity)
-    VALUES ('${name}', '${description}', '${location}', ${quantity});`,
+    `UPDATE products
+    SET name = '${name}', location = '${location}', description = '${description}', quantity = ${quantity}
+    WHERE product_id = ${id};`,
     function (err, result) {
       if (err) {
         return console.error("error running query", err);
