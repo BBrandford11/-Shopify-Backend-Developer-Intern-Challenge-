@@ -25,8 +25,8 @@ This is my Fall 2022 Shopify developer intern challenge.
 ## Setup
 1. Clone this repository onto your local device.
 2. Install dependencies using the `npm install` command.
-3. Start the webpack server using the `npm start` command. 
-4. Start the server using  `node data/server.js` command. 
+3. Start the server using  `node server/server.js` command. 
+4. Start the webpack server using the `npm start` command. 
 5. Fill in any .env keys required.
 6. Visit <http://localhost:3000/> to view the app.
 
