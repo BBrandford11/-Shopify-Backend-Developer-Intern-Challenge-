@@ -10,9 +10,9 @@ This is my Fall 2022 Shopify developer intern challenge.
 
 
 ## Screenshots
-!["screenshot of creating main page showing food trucks."](https://github.com/T-Pirozzini/LHLFinals-FoodTruckApp/blob/main/src/assets/readMePics/food%20truck%20main.png?raw=true)
-!["screenshot of registering a new truck"](https://github.com/T-Pirozzini/LHLFinals-FoodTruckApp/blob/main/src/assets/readMePics/food%20truck%20reg.png?raw=true)
-!["screenshot of paying for a meal"](https://github.com/T-Pirozzini/LHLFinals-FoodTruckApp/blob/main/src/assets/readMePics/food%20truck%20pay.png?raw=true)
+!["screenshot of creating main page showing food trucks."](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/adding_product.png)
+!["screenshot of registering a new truck"](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/main_page.png)
+!["screenshot of paying for a meal"](https://github.com/BBrandford11/shopify-Backend-Developer-Intern-Challenge-/blob/master/public/photos/reduce%20quantity.png)
 
 
 ## Features
