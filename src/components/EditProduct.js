@@ -6,9 +6,9 @@ function Edit(props) {
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [, updateState] = useState();
+  const [id, setId] = useState("");
 
-  const attributes = { name, description, location, quantity };
+  const attributes = { name, description, location, quantity, id };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,12 +20,11 @@ function Edit(props) {
     })
       .then(() => {
         console.log(`New Product added`);
-        setName("")
-        setDescription("")
-        setLocation("")
-        setQuantity("")
+        setName("");
+        setDescription("");
+        setLocation("");
+        setQuantity("");
         window.location.reload();
-      
       })
 
       .catch((err) => {
@@ -35,15 +34,19 @@ function Edit(props) {
 
   return (
     <div className="creatNew">
-      new product
+      Edit product
       <form onSubmit={handleSubmit}>
         <div className="inputs">
           <div className="stack">
-            <h3>Name of New Product</h3>
+            <h3>Id of Product to edit</h3>
+            <input onChange={(e) => setId(e.target.value)} value={id} />
+          </div>
+          <div className="stack">
+            <h3>Name of Product to edit</h3>
             <input onChange={(e) => setName(e.target.value)} value={name} />
           </div>
           <div className="stack">
-            <h3>description of New Product</h3>
+            <h3>description of Product to edit</h3>
             <input
               onChange={(e) => setDescription(e.target.value)}
               value={description}
@@ -52,14 +55,14 @@ function Edit(props) {
         </div>
         <div className="inputs">
           <div className="stack">
-            <h3>location of New Product</h3>
+            <h3>location of Product to edit</h3>
             <input
               onChange={(e) => setLocation(e.target.value)}
               value={location}
             />
           </div>
           <div className="stack">
-            <h3>Quantity of New Product</h3>
+            <h3>Quantity of Product to edit</h3>
             <input
               onChange={(e) => setQuantity(e.target.value)}
               value={quantity}

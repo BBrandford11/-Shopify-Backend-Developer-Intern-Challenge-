@@ -6,7 +6,6 @@ function Create(props) {
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [quantity, setQuantity] = useState("");
-  const [, updateState] = useState();
 
   const attributes = { name, description, location, quantity };
 
@@ -14,18 +13,17 @@ function Create(props) {
     e.preventDefault();
     console.log(attributes);
     fetch("http://localhost:3001/", {
-      method: "POST",
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(attributes),
     })
       .then(() => {
         console.log(`New Product added`);
-        setName("")
-        setDescription("")
-        setLocation("")
-        setQuantity("")
+        setName("");
+        setDescription("");
+        setLocation("");
+        setQuantity("");
         window.location.reload();
-      
       })
 
       .catch((err) => {

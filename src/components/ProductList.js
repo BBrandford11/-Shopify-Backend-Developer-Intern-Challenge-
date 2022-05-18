@@ -20,10 +20,17 @@ function ProductList(props) {
   console.log(props.data);
   return (
     <div className="Productlist">
-      productssss
+      <div className="itemRows">
+        <p className="itemRowsList">product_id</p>
+        <p className="itemRowsList">name</p>
+        <p className="itemRowsList">description</p>
+        <p className="itemRowsList">location</p>
+        <p className="itemRowsList">quantity</p>
+      </div>
       {props.data.map((product) => {
         return (
           <div key={product.product_id} className="product">
+            <p>{product.product_id}</p>
             <p>{product.name}</p>
             <p>{product.description}</p>
             <p>{product.location}</p>
