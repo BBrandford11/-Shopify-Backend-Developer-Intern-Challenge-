@@ -24,7 +24,7 @@ const { Pool } = require("pg");
 const pool = new Pool({
   host: "heffalump.db.elephantsql.com",
   user: "cqhojvry",
-  password:  ,
+  password: "H2xhOYX9QvvOX1RLxckaIsKmVCuY1LWn" ,
   max: 20,
   database: "cqhojvry",
   idleTimeoutMillis: 30000,
