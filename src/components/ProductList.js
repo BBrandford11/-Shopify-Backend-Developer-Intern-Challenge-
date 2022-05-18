@@ -2,7 +2,7 @@ import "./Productlist.css";
 import React, { useState } from "react";
 
 function ProductList(props) {
-  const [shipping, setShipping] = useState("");
+  const [shipping, setShipping] = useState([]);
   const deleteItems = (id) => {
     const attributes = { id };
     fetch("http://localhost:3001/", {
@@ -37,8 +37,8 @@ function ProductList(props) {
       body: JSON.stringify(attributes),
     })
       .then(() => {
-        setShipping(`${name}`);
-
+        setShipping([...shipping,`${name}`]);
+  
         console.log(shipping);
       })
       .then(() => {
