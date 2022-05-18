@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import ProductList from "./components/ProductList";
 import CreateNew from "./components/CreateNew";
 import Edit from "./components/EditProduct";
-import Shipments from "./components/Shipments";
+
 
 function App() {
   const [url, setUrl] = useState("http://localhost:3001/");
@@ -31,7 +31,7 @@ function App() {
         </div>
         <div className="rightside">
         <ProductList data={data} setUrl={setUrl} />
-        <Shipments />
+
         </div>
       </div>
     </div>

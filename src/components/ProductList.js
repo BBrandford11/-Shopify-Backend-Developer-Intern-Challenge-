@@ -1,10 +1,8 @@
-
 import "./Productlist.css";
 import React, { useState } from "react";
 
 function ProductList(props) {
-
-  const [shipping, setShipping] = useState([])
+  const [shipping, setShipping] = useState("");
   const deleteItems = (id) => {
     const attributes = { id };
     fetch("http://localhost:3001/", {
@@ -22,29 +20,35 @@ function ProductList(props) {
       });
   };
 
-  const shipItems = (e,product) => {
-    e.preventDefault();
-    let { name, description, location, quantity, id } = product
-    quantity = quantity -1
+  const shipItems = (product) => {
+    // e.preventDefault();
+    let { name, description, location, quantity, product_id } = product;
+    quantity = quantity - 1;
+    const id = product_id;
     const attributes = { name, description, location, quantity, id };
+    console.log(name);
+    console.log(description);
+    console.log(location);
+    console.log(quantity);
+    console.log(product_id);
     fetch("http://localhost:3001/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(attributes),
     })
       .then(() => {
-        console.log(`New Product added`);
-        shipmentItemList.push([product])
+        setShipping(`${name}`);
 
-        window.location.reload();
+        console.log(shipping);
+      })
+      .then(() => {
+        // window.location.reload();
       })
 
       .catch((err) => {
         console.log(err);
       });
   };
-
-  const shipmentItemList = []
 
   return (
     <div className="Productlist">
@@ -67,23 +71,21 @@ function ProductList(props) {
               {" "}
               Delete item
             </button>
-            <button onClick={(e) => shipItems(e,product)} >Add to Shipments</button>
+            <button onClick={() => shipItems(product)}>Add to Shipments</button>
           </div>
         );
       })}
       <h1>Shipments</h1>
-      {/* {shipmentItemList.map((product) => {
+      {/* {shipping.map((product) => {
         return (
-          <div key={product.product_id} className="product">
-          <p>{product.product_id}</p>
+          <div key={product.name}  className="product">
+ 
           <p>{product.name}</p>
-          <p>{product.description}</p>
-          <p>{product.location}</p>
-          <p>{product.quantity}</p>
-      
+
         </div>
         );
       })} */}
+      {shipping}
     </div>
   );
 }
