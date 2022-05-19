@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my Fall 2022 Shopify developer intern challenge.
+This is my Fall 2022 Shopify developer intern challenge. I decided to use react on the front end because it is what i am most comfortable using and for the database I used elephant sql for my cloudbased storage of data.
 
 ## Authors
 - [Bryce Brandford](https://github.com/BBrandford11)
